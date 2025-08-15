@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+  <title>Spin Wheel</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- defer memastikan JS dieksekusi setelah DOM siap -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Spin Wheel</h1>
+      <div class="wheel-wrap">
+        <div class="pointer"></div>
+        <!-- ukuran atribut WAJIB agar kanvas tidak 0 di HP -->
+        <canvas id="wheel" width="600" height="600" aria-label="Spin wheel"></canvas>
+      </div>
+      <div class="row">
+        <button id="spinBtn" type="button">SPIN</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal hasil -->
+  <div id="resultModal" class="modal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="resultTitle">
+      <div id="resultTitle" class="modal-title">Hasil</div>
+      <div id="resultText" class="result-text">—</div>
+      <button id="continueBtn" type="button" class="btn">Continue</button>
+    </div>
+  </div>
+</body>
+</html>
